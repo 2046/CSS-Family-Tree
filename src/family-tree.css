@@ -1,0 +1,197 @@
+/*
+    Thanks:
+        - http://codepen.io/P233/pen/Kzbsi
+        - http://codepen.io/chuongdang/pen/lcnsC
+*/
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.tree.horizontal ul{
+    position: relative;
+    margin-left: 250px;
+}
+
+.tree.horizontal ul:only-child{
+    margin-left: 50px;
+}
+
+.tree.horizontal ul:before{
+    position: absolute;
+    top: 50%;
+    left: -100px;
+    width: 50px;
+    margin-top: 1px;
+    content: "";
+    border-top: 2px solid #ccc;
+}
+
+.tree.horizontal ul:only-child:before{
+    display: none;
+}
+
+.tree.horizontal li{
+    position: relative;
+    min-height: 60px;
+    list-style: none;
+}
+
+.tree.horizontal li:before{
+    position: absolute;
+    left: -50px;
+    height: 100%;
+    content: "";
+    border-left: 2px solid #ccc;
+}
+
+.tree.horizontal li:after{
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    width: 50px;
+    margin-top: 1px;
+    content: "";
+    border-top: 2px solid #ccc;
+}
+
+.tree.horizontal li:only-child:after,
+.tree.horizontal li:only-child:before{
+    display: none;
+}
+
+.tree.horizontal li:first-child:before{
+    top: 50%;
+    width: 10px;
+    height: 50%;
+    margin-top: 2px;
+    -webkit-border-radius: 10px 0 0 0;
+    -moz-border-radius: 10px 0 0 0;
+    border-radius: 10px 0 0 0;
+}
+
+.tree.horizontal li:first-child:after{
+    height: 10px;
+    -webkit-border-radius: 10px 0 0 0;
+    -moz-border-radius: 10px 0 0 0;
+    border-radius: 10px 0 0 0;
+}
+
+.tree.horizontal li:last-child:before{
+    width: 10px;
+    height: 50%;
+    -webkit-border-radius: 0 0 0 10px;
+    -moz-border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 10px;
+}
+
+.tree.horizontal li:last-child:after{
+    height: 10px;
+    margin-top: -9px;
+    border-top: none;
+    border-bottom: 2px solid #ccc;
+    -webkit-border-radius: 0 0 0 10px;
+    -moz-border-radius: 0 0 0 10px;
+    border-radius: 0 0 0 10px;
+}
+
+.tree.horizontal .node{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    min-width: 150px;
+    margin-top: -15px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.tree.vertical ul{
+    position: relative;
+    padding-top: 50px;
+}
+
+.tree.vertical ul:before{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 50px;
+    content: "";
+    border-left: 2px solid #ccc;
+}
+
+.tree.vertical ul:only-child:before{
+    display: none;
+}
+
+.tree.vertical li{
+    position: relative;
+    float: left;
+    list-style: none;
+    text-align: center;
+    padding: 50px 5px 0 5px;
+}
+
+.tree.vertical li:before{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 50px;
+    content: "";
+    border-top: 2px solid #ccc;
+}
+
+.tree.vertical li:after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 50px;
+    content: "";
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+}
+
+.tree.vertical li:only-child{
+    padding-top: 0;
+}
+
+.tree.vertical li:first-child:before,
+.tree.vertical li:last-child:after{
+    display: none;
+}
+
+.tree.vertical li:first-child:after{
+    -webkit-border-radius: 10px 0 0 0;
+    -moz-border-radius: 10px 0 0 0;
+    border-radius: 10px 0 0 0;
+}
+
+.tree.vertical li:last-child:before{
+    border-right: 2px solid #ccc;
+    -webkit-border-radius: 0 10px 0 0;
+    -moz-border-radius: 0 10px 0 0;
+    border-radius: 0 10px 0 0;
+}
+
+.tree.vertical .node{
+    display: inline-block;
+    min-width: 150px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
