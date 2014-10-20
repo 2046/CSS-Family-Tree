@@ -31,7 +31,8 @@
     border-top: 2px solid #ccc;
 }
 
-.tree.horizontal ul:only-child:before{
+.tree.horizontal ul:only-child:before,
+.tree.horizontal ul:only-child:after{
     display: none;
 }
 
@@ -100,6 +101,7 @@
 }
 
 .tree.horizontal li:only-child:after{
+    display: block;
     margin-top: -7px;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
