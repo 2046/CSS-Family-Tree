@@ -100,7 +100,7 @@
     border-radius: 0 0 0 10px;
 }
 
-.tree.horizontal li:only-child:after{
+.tree.horizontal ul ul li:only-child:after{
     display: block;
     margin-top: -7px;
     -webkit-border-radius: 0px;
